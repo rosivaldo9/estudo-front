@@ -1,0 +1,306 @@
+
+body p, h1, ul, li{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+li{
+    list-style: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*   GRID GERAL   */
+
+.estrutura{
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-areas: 
+    "header header header"
+    "sidenav content anuncios"
+    "footer footer footer";
+}
+
+@media (max-width: 1200px) {
+    .estrutura{
+        grid-template-areas: 
+        "header header header"
+        "sidenav content content"
+        "sidenav anuncios anuncios"
+        "footer footer footer";
+    }
+}
+@media (max-width: 760px) {
+    .estrutura{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "header"
+        "sidenav"
+        "content"
+        "anuncios"
+        "footer";
+    }
+}
+
+.header{
+    grid-area: header;
+    background: linear-gradient(135deg, #88ee, #B07DFB);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav a{
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 1.25em;
+    background-color: rgba(0,0,0, .1);
+    border-radius: 5px;
+    transition: .2s;
+}
+header nav a:hover{
+    background-color: rgba(0,0,0, .5);
+}
+header li + li{
+    margin-left: 30px;
+}
+
+
+@media (max-width: 760px){
+    .header {
+        grid-template-columns: auto;
+    }
+    .logo{
+        margin-bottom: 20px;
+    }
+    .header nav a{
+        font-size: 1em;
+    }
+    header li + li{
+        margin-left: 10px;
+    }
+
+}
+
+
+.logo{
+    max-width: 200px;
+}
+
+/*  Sidenav*/
+.sidenav{
+    grid-area: sidenav;
+    background: #fafbfc;
+    padding: 30px;
+}
+
+@media (max-width: 760px){
+
+    .sidenav{
+        overflow-x: auto;
+    }
+
+
+    .sidenav ul{
+        display: flex;
+    }
+    .sidenav li{
+        flex: 1 0 60px;
+    }
+    .sidenav{
+        padding: 0 30px;
+    }
+    .sidenav ul li a{
+        margin: 30px 30px 30px 0;
+    }
+}
+
+.sidenav li a{
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin: 0px auto 30px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    background: white;
+}
+
+.sidenav li a:hover{
+    background: #B07DFB;
+}
+
+
+/*  Content  */
+.content{
+    grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.col-wide{
+    grid-column: 1 / -1;
+}
+
+.imagem1{
+    grid-row: 3 / 5;
+    align-self: end;
+}
+
+.item-2{
+    align-self: end;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color:rgba(0,0,0,.7)
+}
+
+.titulo{
+    color: #B07DFB;
+}
+
+.caracteristicas{
+    display: flex;
+}
+.caracteristicas > div{
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    position: relative;
+}
+
+.caracteristicas span{
+    display: block;
+    color:  #B07DFB;
+    align-items: flex-start;
+}
+
+.numero{
+    color: #B07DFB;
+    font-size: 3em;
+    line-height: 1;
+    margin: 10px auto;
+}
+.rotulo{
+    background: white;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    position: relative;
+    top: 2px;
+
+}
+
+.caracteristicas > div:first-child{
+   margin-right: 30px;
+}
+
+
+
+
+.titulo-h1{
+    font-size: 3.75em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.titulo span{
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+.informações p + p{
+    margin-top: 30px;
+}
+.anuncios{
+   grid-area: anuncios;
+   background: #fafbfc;
+   display: grid;
+   align-content: start;
+   padding: 30px;
+   grid-gap: 30px;
+}
+
+/*  footer  */
+.footer{
+    grid-area: footer;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.footer p{
+    color: white;
+   text-align: center;
+   padding: 30px;
+
+}
+
+.destaque{
+    font-size: 0,875em;
+    color: #B07DFB;
+    margin: 16em;
+}
+
+.citacao, .atributos{
+    align-self: start;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44, 0.15);
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.citacao p{
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
+}
+
+.atributos li{
+    color: white;
+    font-family: Courier, monospace;
+    font-size: 1.125em;
+    padding: 15px;
+}
+
+.atributos li + li{
+    border-top: 2px solid #B07DFB;
+}
+
+
+
+@media (max-width: 600px){
+    .content{
+        grid-template-columns: auto;
+    }
+}

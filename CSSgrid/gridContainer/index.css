@@ -1,0 +1,113 @@
+
+.grid{
+    display: grid;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+.item{
+    margin: 5px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.item1{
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+h1{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-template-collumns {
+    grid-template-columns: 100px 100px 100px 100px ;  /* define quantas colunas o container vai ter*/
+}
+
+.grid-template-columns-3{
+    grid-template-columns: 1fr 1fr 1fr;     /* a unidade fr aumenta valor propocional*/
+}
+
+.subgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+
+
+.minmax{
+grid-template-columns: minmax(200px, 1fr) 1fr 1fr;  /* Duas colunas são criadas, sendo a segunda com o 
+                                          dobro do tamanho da primeira. fr é uma unidade fracional.
+                                           O tamanho do conteúdo é respeitado, ou seja, se o conteúdo na 
+                                           primeira coluna for maior que o da segunda, a primeira será maior.*/
+}
+
+
+.repeat{
+grid-template-columns: repeat(5, 1fr); /*Três colunas são criadas, a primeira terá no mínimo 200px de 
+                                       largura e no máximo 1fr(isso significa que após 200px ela se 
+                                       expande da mesma forma que as outras colunas). As outras duas 
+                                       colunas vão ter 1fr.*/
+
+}
+
+.repeat-auto-fit{
+grid-template-columns: repeat(auto-fit, minmax(100px, auto)); /*Cria 3 colunas com 1fr de tamanho. 
+                                                  O repeat seria a mesma coisa que escrever 1fr 1fr 1fr.*/
+max-width: 800px !important;
+}
+
+
+.repeat-auto-fill{
+    grid-template-columns: repeat(auto-fill, minmax(100px, auto)); 
+                                                      max-width: 800px !important;
+    }
+
+.areas-1{
+    grid-template-areas: 
+    "logo nav nav"
+    "sidnav cotent advert"
+    "sidnav footer footer";
+    ;
+} 
+
+.logo{
+    grid-area: logo;
+}
+.nav{
+    grid-area: nav;
+}
+.cotent{
+    grid-area: cotent;
+}
+.sidnav{
+    grid-area: sidnav;
+}
+.advert{
+    grid-area: advert;
+}
+.footer{
+    grid-area: footer;
+}
+
+.grid-template{
+    grid-template: 100px 50px / 1fr 1fr;  /*antes da barra e as linha e depois da barra são colunas*/
+}
+
+
+
+.gap-column{
+    grid-column-gap: 2px; /*antes da barra e as linha e depois da barra são colunas*/
+}
+
+.gap-row{
+    grid-row-gap: 2px; /*antes da barra e as linha e depois da barra são colunas*/
+}

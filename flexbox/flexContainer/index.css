@@ -1,0 +1,165 @@
+
+h1{
+text-align: center;
+margin-top: 100px;
+}
+
+.container{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    display: flex;
+    
+}
+.container1{
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.item{
+    background-color: red;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+
+.item1{
+    background-color: red;
+    text-align: center;
+    margin: 0 10 auto;
+    border: 1px solid #ccc;
+    width: 50px;
+}
+
+
+.flex{
+    display: flex; /*alinha os elemento do container  na msma linha, mas caso seja muito 
+                      elementos vai ultrapassar o container*/
+}
+.flex-item-1{
+    flex: 1;   /* os elemento vão ocupar o container completo na linha flex*/
+}
+
+.row{
+    flex-direction: row;  /* os elemento vão ficar em linha container */
+}
+.row-revese{
+    flex-direction: row-reverse;  /* os elemento vão ficar em linha container em ordem reversa*/
+}
+
+
+
+
+.colum{
+    flex-direction: column; /* os elemento vão ficar em coluna container */
+}
+.colum-revese{
+    flex-direction: column-reverse; /* os elemento vão ficar em coluna container em ordem reversa */
+}
+
+
+.norap{
+    flex-wrap: nowrap;  /* valor padrão para container display:flex, e item:flex, no contanier o item com nome grande
+                          vão utrapassar a margem do container */
+}
+.wra{ 
+    flex-wrap: wrap;   /* para container display:flex, e item:flex, no contanier o item com nome grande
+                        não vão utrapassar a margem do container, vai adicionar o intem na proxima linha */
+}
+.wrapVeverse{
+    
+    flex-wrap: wrap-reverse;       /* para container display:flex, e item:flex, no contanier o item com nome grande
+                          não vão utrapassar a margem do container, vai adicionar o intem na proxima linha na ordem reversa */
+}
+
+.row-nowrap{
+    flex-flow: row nowrap;  /* a junção do flex-direction + flex-wrap */
+}
+.row-wrap{
+    flex-flow: row wrap;  /* a junção do flex-direction + flex-wrap */
+}
+.column-nowap{
+    flex-flow: column nowrap;  /* a junção do flex-direction + flex-wrap */
+}
+
+/* os proximos exemplos de flexbox são para alinhamento em linha, o funcionamento é o mesmo para coluna*/
+
+.flex-start{
+    justify-content: flex-start; /* alinha os itens na esquerda do conatiner, não pode utilizar flex:1 no container*/
+}
+.flex-end1{
+    justify-content: flex-end;  /* alinha os itens na direita do conatiner, não pode utilizar flex:1 no container*/
+}
+.center{
+    justify-content: center; /* alinha os itens no centro do conatiner, não pode utilizar flex:1 no container*/
+}
+.space-between{
+    justify-content: space-between; /* alinha os itens um em cada lado do conatiner, não pode utilizar flex:1 no container*/
+}
+.space-around{
+    justify-content: space-around;
+}
+
+/* os proximos exemplos de flexbox são para alinhamento em linha, o funcionamento é o mesmo para coluna*/
+
+
+.stretch{
+    align-items: stretch; /* quando item tem o texto maior que os outros itens, o item cresce para baixo
+                           e todos os outros itens crescem acompanhando */
+}
+.flex-start{
+    align-items: flex-start; /* quando item tem o texto maior que os outros itens, o item cresce para baixo
+                                e todos os outros itens não crescem acompanhando */
+}
+.flex-end{
+    align-items: flex-end; /* quando item tem o texto maior que os outros itens, o item cresce para cima
+                            e todos os outros itens não crescem acompanhando */
+}
+
+.acenter{
+    align-items: center; /* quando item tem o texto maior que os outros itens, o item cresce para centro
+                             e todos os outros itens não crescem acompanhando */
+}
+
+.stretchr{
+    align-content: stretch; /* essa propiedade precisa ter mais de uma linha para fazer efeito, isso é possivel com flex-wrap: wrap;
+                              cresce junto com o conteudo para utilizar o maximo do container */
+}
+.flex-startr{
+    align-content: flex-start; /* essa propiedade precisa ter mais de uma linha para fazer efeito, isso é possivel com flex-wrap: wrap;
+                                ocupa o espaço que puder para fica posicionado na parte superior, não ocupa todo container*/
+}
+.flex-endr{
+    align-content: flex-end;       /* essa propiedade precisa ter mais de uma linha para fazer efeito, isso é possivel com flex-wrap: wrap;
+                                   ocupa o espaço que puder para fica posicionado na parte inferior, não ocupa todo container*/
+}
+.centerr{
+    align-content: center;    /* essa propiedade precisa ter mais de uma linha para fazer efeito, isso é possivel com flex-wrap: wrap;
+                                ocupa o espaço que puder para fica posicionado no centro, não ocupa todo container*/
+}
+.space-aroundr{
+    align-content: space-around;          /* essa propiedade precisa ter mais de uma linha para fazer efeito, isso é possivel com flex-wrap: wrap;
+                                           ocupa o espaço que puder para fica posicionado com margem superior,inferior e entre as linhas, não ocupa todo container*/
+}
+.space-betweenr{
+    align-content: space-between;   /* essa propiedade precisa ter mais de uma linha para fazer efeito, isso é possivel com flex-wrap: wrap;
+                                   ocupa o espaço que puder para fica posicionado uma linha na parte superior e outra na inferior, não ocupa todo container */
+}
+
+
+
+
+
+
+
+
+
+
